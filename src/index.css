@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
+
+
+/* CHAPTER: REACT_CSS
+main three points when using css in react are,
+1) there is div with a id root within the body where the flex-grow,justify-content,align-items properties should be used 
+2) then there should be a max width with our favour like 800px in App class
+3) then there should be a height of 100vh in App class and a min-height of 100vh in body*/
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+font-size: 16px;
+}
+
+body {
+min-height: 100vh;
+font-family: 'Open Sans', sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+display: flex;
+background-color: #efefef;
+background-image: repeating-linear-gradient(104deg, rgba(0, 0, 0, 0.11) 0px, rgba(0, 0, 0, 0.11) 12px, rgba(1, 1, 1, 0.16) 12px, rgba(1, 1, 1, 0.16) 24px, rgba(0, 0, 0, 0.14) 24px, rgba(0, 0, 0, 0.14) 36px, rgba(0, 0, 0, 0.23) 36px, rgba(0, 0, 0, 0.23) 48px, rgba(0, 0, 0, 0.12) 48px, rgba(0, 0, 0, 0.12) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(0, 0, 0, 0.21) 72px, rgba(0, 0, 0, 0.21) 84px, rgba(0, 0, 0, 0.24) 84px, rgba(0, 0, 0, 0.24) 96px, rgba(1, 1, 1, 0.23) 96px, rgba(1, 1, 1, 0.23) 108px, rgba(1, 1, 1, 0.07) 108px, rgba(1, 1, 1, 0.07) 120px, rgba(0, 0, 0, 0.01) 120px, rgba(0, 0, 0, 0.01) 132px, rgba(1, 1, 1, 0.22) 132px, rgba(1, 1, 1, 0.22) 144px, rgba(1, 1, 1, 0.24) 144px, rgba(1, 1, 1, 0.24) 156px, rgba(0, 0, 0, 0) 156px, rgba(0, 0, 0, 0) 168px, rgba(0, 0, 0, 0.12) 168px, rgba(0, 0, 0, 0.12) 180px), repeating-linear-gradient(194deg, rgba(1, 1, 1, 0.01) 0px, rgba(1, 1, 1, 0.01) 12px, rgba(1, 1, 1, 0.15) 12px, rgba(1, 1, 1, 0.15) 24px, rgba(0, 0, 0, 0.09) 24px, rgba(0, 0, 0, 0.09) 36px, rgba(0, 0, 0, 0.02) 36px, rgba(0, 0, 0, 0.02) 48px, rgba(0, 0, 0, 0.1) 48px, rgba(0, 0, 0, 0.1) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(1, 1, 1, 0.15) 72px, rgba(1, 1, 1, 0.15) 84px, rgba(0, 0, 0, 0.18) 84px, rgba(0, 0, 0, 0.18) 96px, rgba(1, 1, 1, 0.15) 96px, rgba(1, 1, 1, 0.15) 108px, rgba(1, 1, 1, 0.09) 108px, rgba(1, 1, 1, 0.09) 120px, rgba(1, 1, 1, 0.07) 120px, rgba(1, 1, 1, 0.07) 132px, rgba(1, 1, 1, 0.05) 132px, rgba(1, 1, 1, 0.05) 144px, rgba(0, 0, 0, 0.1) 144px, rgba(0, 0, 0, 0.1) 156px, rgba(1, 1, 1, 0.18) 156px, rgba(1, 1, 1, 0.18) 168px), repeating-linear-gradient(149deg, rgba(0, 0, 0, 0.24) 0px, rgba(0, 0, 0, 0.24) 16px, rgba(1, 1, 1, 0.06) 16px, rgba(1, 1, 1, 0.06) 32px, rgba(0, 0, 0, 0.16) 32px, rgba(0, 0, 0, 0.16) 48px, rgba(1, 1, 1, 0) 48px, rgba(1, 1, 1, 0) 64px, rgba(1, 1, 1, 0.12) 64px, rgba(1, 1, 1, 0.12) 80px, rgba(1, 1, 1, 0.22) 80px, rgba(1, 1, 1, 0.22) 96px, rgba(0, 0, 0, 0.24) 96px, rgba(0, 0, 0, 0.24) 112px, rgba(0, 0, 0, 0.25) 112px, rgba(0, 0, 0, 0.25) 128px, rgba(1, 1, 1, 0.12) 128px, rgba(1, 1, 1, 0.12) 144px, rgba(0, 0, 0, 0.18) 144px, rgba(0, 0, 0, 0.18) 160px, rgba(1, 1, 1, 0.03) 160px, rgba(1, 1, 1, 0.03) 176px, rgba(1, 1, 1, 0.1) 176px, rgba(1, 1, 1, 0.1) 192px), repeating-linear-gradient(239deg, rgba(1, 1, 1, 0.18) 0px, rgba(1, 1, 1, 0.18) 3px, rgba(0, 0, 0, 0.09) 3px, rgba(0, 0, 0, 0.09) 6px, rgba(0, 0, 0, 0.08) 6px, rgba(0, 0, 0, 0.08) 9px, rgba(1, 1, 1, 0.05) 9px, rgba(1, 1, 1, 0.05) 12px, rgba(0, 0, 0, 0.01) 12px, rgba(0, 0, 0, 0.01) 15px, rgba(1, 1, 1, 0.12) 15px, rgba(1, 1, 1, 0.12) 18px, rgba(0, 0, 0, 0.05) 18px, rgba(0, 0, 0, 0.05) 21px, rgba(1, 1, 1, 0.16) 21px, rgba(1, 1, 1, 0.16) 24px, rgba(1, 1, 1, 0.07) 24px, rgba(1, 1, 1, 0.07) 27px, rgba(1, 1, 1, 0.23) 27px, rgba(1, 1, 1, 0.23) 30px, rgba(0, 0, 0, 0.2) 30px, rgba(0, 0, 0, 0.2) 33px, rgba(0, 0, 0, 0.18) 33px, rgba(0, 0, 0, 0.18) 36px, rgba(1, 1, 1, 0.12) 36px, rgba(1, 1, 1, 0.12) 39px, rgba(1, 1, 1, 0.13) 39px, rgba(1, 1, 1, 0.13) 42px, rgba(1, 1, 1, 0.2) 42px, rgba(1, 1, 1, 0.2) 45px, rgba(1, 1, 1, 0.18) 45px, rgba(1, 1, 1, 0.18) 48px, rgba(0, 0, 0, 0.2) 48px, rgba(0, 0, 0, 0.2) 51px, rgba(1, 1, 1, 0) 51px, rgba(1, 1, 1, 0) 54px, rgba(0, 0, 0, 0.03) 54px, rgba(0, 0, 0, 0.03) 57px, rgba(1, 1, 1, 0.06) 57px, rgba(1, 1, 1, 0.06) 60px, rgba(1, 1, 1, 0) 60px, rgba(1, 1, 1, 0) 63px, rgba(0, 0, 0, 0.1) 63px, rgba(0, 0, 0, 0.1) 66px, rgba(1, 1, 1, 0.19) 66px, rgba(1, 1, 1, 0.19) 69px), linear-gradient(194deg, rgb(64,170,247), rgb(2,84,93));
+}
+
+#root {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #333;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.Header, .Footer {
+    width: 100%;
+    background-color: #66d8f5;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Header h1 {
+    font-size: 1.5rem;
+    /* font-family: "Press Start 2P", system-ui; */
+    font-family: "Fredericka the Great", serif;
+  }
+  
+  
+  .Footer {
+    padding: 0.75rem;
+    display: grid;
+    place-content: center;
+  }
+  
+  .Nav {
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .searchForm {
+    width: 80%;
+    padding: 1rem 0 0 0.75rem;
+  }
+  
+  .searchForm input[type="text"] {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    outline: none;
+  }
+  
+  .searchForm label {
+    position: absolute;
+    left: -99999px;
+  }
+  
+  .Nav ul {
+    color: #fff;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  
+  .Nav li {
+    padding: 1rem;
+  }
+  
+  .Nav li:hover, 
+  .Nav li:focus {
+    padding: 1rem;
+  }
+  
+  .Nav li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .Nav li:hover, 
+  .Nav li:focus, 
+  .Nav li:hover a, 
+  .Nav li:focus a  {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .Nav li:hover a, 
+  .Nav li:focus a {
+    cursor: pointer;
+  }
+
+  .Home, .NewPost, .PostPage, .About, .Missing {
+    width: 100%;
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #fff;
+  }
+  
+  .post {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .Home .post a {
+    text-decoration: none;
+  }
+  
+  .Home .post a, 
+  .Home .post a:visited {
+    color: #000;
+  }
+  
+  .post:first-child {
+    margin-top: 0;
+  }
+  
+  .post:last-child {
+    border-bottom: none;
+  }
+  
+  .postDate {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+  
+  .postBody {
+    margin: 1rem 0;
+  }
+  
+  .newPostForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .newPostForm label {
+    margin-top: 1rem;
+  }
+  
+  .newPostForm input[type='text'], 
+  .newPostForm textarea {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    margin-right: 0.25rem;
+    outline: none;
+  }
+  
+  .newPostForm textarea {
+    height: 100px;
+  }
+  
+  .newPostForm button {
+    margin-top: 1rem;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .Missing p, .PostPage p, .NewPost p {
+    margin-top: 1rem;
+  }
+  
+  .PostPage button {
+    height: 48px;
+    min-width: 48px;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .deleteButton {
+    background-color: red;
+  }
+  
+  .editButton {
+    background-color: #333;
+  }
+  
+  .statusMsg {
+    margin-top: 2rem;
+  }
+  
+  @media only screen and (min-width: 610px) {
+    html {
+      font-size: 22px;
+    }
+  
+    .Header h1 {
+      font-size: 2rem;
+    }
+  
+    .Nav {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .Nav ul {
+      text-align: right;
+    }
+  
+    .Nav li:hover, 
+    .Nav li:focus, 
+    .Nav li:hover a, 
+    .Nav li:focus a  {
+      background-color: #eee;
+      color: #333;
+    }
+  
+    .searchForm {
+      width: 50%;
+      padding: .5rem 0;
+    }
+   
+    .searchForm input[type="text"] {
+      margin-left: 0.5rem;
+    }
+  
+    .newPostForm textarea {
+      height: 300px;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+  
+    .Header svg {
+      font-size: 3rem;
+    }
+  
+  }

@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "1st post",
+      "datetime": "July 16, 2021 11:47:39 AM",
+      "body": "lifeee is thiss, i like thizzz"
+    },
+    {
+      "id": "2",
+      "title": "2nd post",
+      "datetime": "July 16, 2021 11:48:36 AM",
+      "body": "After all this time? 'Always'"
+    },
+    {
+      "id": "3",
+      "title": "3rd post",
+      "datetime": "July 16, 2021 11:49:34 AM",
+      "body": "Avengersssss Assemble"
+    },
+    {
+      "id": "4",
+      "title": "4th post",
+      "datetime": "June 28, 2024 10:31:13 PM",
+      "body": "We were on a breakkkkkkkkk....."
+    },
+    {
+      "id": "5",
+      "title": "My Fifth Post",
+      "datetime": "June 28, 2024 10:36:41 PM",
+      "body": "wolfpack dont die"
+    }
+  ]
+}
